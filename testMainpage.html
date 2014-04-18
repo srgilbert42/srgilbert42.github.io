@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>Main Page</title>
+      <link href="style.css" rel="stylesheet" type="text/css" media="all" />
+   </head>
+
+   <body>
+
+      <h1 class="main">Le Euphoria - The Internet's Front Page</h1><br>
+
+      <a class="main" href="http://i.imgur.com/EX7JJ6w.jpg" target="_blank">A Picture of a Bear <span class="small"> (i.imgur.com)</span></a>
+      <p class="right">2/21/2014 12:36 am</p>
+      <p class="main">Yep. Just a picture of a bear.</p><br>
+      <input type="button" value="Le Upvote"/><br>
+      <input type="button" value="Le Downvote"/><br><br><br>
+
+      <a class="main" href="http://www.reddit.com" target="_blank">Oddly similar? <span class="small">(reddit.com)</span></a>
+      <p class="right">2/21/2014 9:53 am</p>
+      <p class="main">I just found a website that seems a bit like ours. Even uses the same upvote and downvote system. What do
+      you guys think?</p><br>
+      <input type="button" value="Le Upvote"/><br>
+      <input type="button" value="Le Downvote"/><br><br><br>
+
+      <a class="main" href="http://i.imgur.com/3oCEPHy.png" target="_blank">[PLZ DONT UPVOTE] Any1 else remembre this jem??!<span class="small">(i.imgur.com)</span></a>
+      <p class="right">2/21/2014 5:30 am</p>
+      <p class="main">Was just looking around in my attic and found a classic. As a 90s kid, let me just say that upboats are indeed
+      to the left.</p><br>
+      <input type="button" value="Le Upvote"/><br>
+      <input type="button" value="Le Downvote"/><br><br><br>
+
+      <a class="main" href="http://i.imgur.com/Xr3EZDg.jpg" target="_blank">Literally this. <span class="small">(i.imgur.com)</span></a>
+      <p class="right">2/22/2014 1:37 pm</p>
+      <p class="main">First post! This'll probably get buried but I've been lurking for a while now, thought I'd post this.</p><br>
+      <input type="button" value="Le Upvote"/><br>
+      <input type="button" value="Le Downvote"/><br><br><br>
+      
+      <hr>
+
+      <ul>
+         <li>
+            <p>Logout:</p>
+            <form action="testLogin.html" method="get">
+            <input type="submit" value="Le Logout">
+            </form>
+         </li>
+
+         <li>
+            <p>Add a site:</p>
+            <form action="testSubmitlink.html" method="get">
+            <input type="submit" value="Le Submit">
+            </form>
+         </li>
+
+         <li>
+            <p>Get a random number:<div id="randomArea"></div></p>
+            <input type="button" value="Le Random" onclick="GetRandom('randomArea')"/>
+            
+            <script type="text/javascript">
+               function GetRandom(area)
+               {
+                  var random = Math.floor((Math.random()*9+1));
+                  element = document.getElementById(area);
+                  element.innerHTML = random;
+               }
+            </script><br><br>
+         
+         </li>
+      </ul>
+   </body>
+</html>
