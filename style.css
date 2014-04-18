@@ -1,0 +1,83 @@
+body
+{
+	font-family: Verdana, Georgia, serif;
+	background-image:url ("green_cup.png");
+	background-repeat:repeat-x;
+}
+
+.header1 
+{
+	font-size:60px;
+	display:inline-block;
+}
+
+.picture1 
+{
+	height:240px;
+	width:240px;
+}
+
+h1.main 
+{	
+	font-size:55px;
+}
+
+a.main
+{
+	font-size:35px;
+}
+
+p.main
+{
+	font-size:17px;
+}
+
+.url
+{
+	width:400px;
+}
+
+.title
+{
+	width:400px;
+}
+
+.description
+{
+	width:500px;
+	height:200px;
+	font-family: Verdana, Georgia, serif;
+}
+
+.left
+{
+	float: left;
+	font-size:17px;
+}
+
+.right
+{
+	float: right;
+	font-size:17px;
+}
+
+.small
+{
+	font-size:18px;
+}
+
+#stuff
+{
+	font-size:20px;
+}
+
+.bolding
+{
+	font-weight:bold;
+}
+
+.wrong
+{
+	color:red;
+	font-size:50px;
+}
