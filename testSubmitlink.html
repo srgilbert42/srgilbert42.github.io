@@ -8,7 +8,7 @@
 
    <body>
 
-      <form name="myForm2" id="form" action ="testMainpage.html" method="post" onsubmit="return validation()">
+      <form name="myForm2" id="form" action ="./testMainpage.html" method="post" onsubmit="return validation()">
 
          <label for="thisurl">Le URL:</label>
          <div id="urlWrong" class="wrong"></div>
@@ -36,56 +36,23 @@
 
                if (URL.length == 0)
                {
-                  // elementURL = document.getElementById("urlWrong");
-                  // elementURL.innerHTML = "NO URL!!!!!";
                   return false;
                }
-
-               // if (URL.length > 0)
-               // {
-               //    elementURL = document.getElementById("urlWrong");
-               //    elementURL.innerHTML = " ";
-               // }
 
                if (!regex.test(URL))
                {
-                  // elementURL = document.getElementById("urlWrong");
-                  // elementURL.innerHTML = "POORLY FORMED URL!!!!";
                   return false;
                }
-
-               // if (regex.test(URL))
-               // {
-               //    elementURL = document.getElementById("urlWrong");
-               //    elementURL.innerHTML = " ";
-               // }
 
                if (title.length == 0)
                {
-                  // elementTitle = document.getElementById("titleWrong");
-                  // elementTitle.innerHTML = "NO TITLE!!!!!!!!!";
                   return false;
                }
-
-               // if (title.length > 0)
-               // {
-               //    elementTitle = document.getElementById("titleWrong");
-               //    elementTitle.innerHTML = " ";
-               // }
 
                if (description.length == 0)
                {
-                  // elementDescription = document.getElementById("descriptionWrong");
-                  // elementDescription.innerHTML = "NO DESCRIPTION!!!!!!!";
                   return false;
                }
-
-               // if (description.length > 0)
-               // {
-               //    elementDescription = document.getElementId("descriptionWrong");
-               //    elementDescription.innerHTML = " ";
-               // }
-
             }
 
             function validateTitle()
@@ -152,7 +119,7 @@
       
       </form>
 
-      <form action="testMainpage.html" method="get">
+      <form action="./testMainpage.html" method="get">
          <input type="submit" value="Le Cancel">
       </form>
    </body>
