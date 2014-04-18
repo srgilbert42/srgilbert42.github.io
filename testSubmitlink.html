@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+
+<html>
+   <head>
+      <title>Submit Link</title>
+      <link href="style.css" rel="stylesheet" type="text/css" media="all" />
+   </head>
+
+   <body>
+
+      <form name="myForm2" id="form" action ="testMainpage.html" method="post" onsubmit="return validation()">
+
+         <label for="thisurl">Le URL:</label>
+         <div id="urlWrong" class="wrong"></div>
+         <input type="text" class="url" id="thisurl" name="myurl" onblur="return validateURL()">
+         <br><br>
+
+         <label for="thistitle">Le Title:</label>
+         <div id="titleWrong" class="wrong"></div>
+         <input type="text" class="title" id="thistitle" name="mytitle" onblur="return validateTitle()">
+         <br><br>
+   
+         <p>Le Description:</p>
+         <div id="descriptionWrong" class="wrong"></div>
+         <textarea class="description" id="description" rows="15" cols="57" name="mydescription" form="form" onblur="return validateDescription()"></textarea><br><br><br>
+
+         <input type="submit" value="Le Submit">
+
+         <script type="text/javascript">
+            function validation()
+            {
+               var regex = /http[s]?:\/\/.*/;
+               var URL = document.getElementById("thisurl").value;
+               var title = document.getElementById("thistitle").value;
+               var description = document.getElementById("description").value;
+
+               if (URL.length == 0)
+               {
+                  // elementURL = document.getElementById("urlWrong");
+                  // elementURL.innerHTML = "NO URL!!!!!";
+                  return false;
+               }
+
+               // if (URL.length > 0)
+               // {
+               //    elementURL = document.getElementById("urlWrong");
+               //    elementURL.innerHTML = " ";
+               // }
+
+               if (!regex.test(URL))
+               {
+                  // elementURL = document.getElementById("urlWrong");
+                  // elementURL.innerHTML = "POORLY FORMED URL!!!!";
+                  return false;
+               }
+
+               // if (regex.test(URL))
+               // {
+               //    elementURL = document.getElementById("urlWrong");
+               //    elementURL.innerHTML = " ";
+               // }
+
+               if (title.length == 0)
+               {
+                  // elementTitle = document.getElementById("titleWrong");
+                  // elementTitle.innerHTML = "NO TITLE!!!!!!!!!";
+                  return false;
+               }
+
+               // if (title.length > 0)
+               // {
+               //    elementTitle = document.getElementById("titleWrong");
+               //    elementTitle.innerHTML = " ";
+               // }
+
+               if (description.length == 0)
+               {
+                  // elementDescription = document.getElementById("descriptionWrong");
+                  // elementDescription.innerHTML = "NO DESCRIPTION!!!!!!!";
+                  return false;
+               }
+
+               // if (description.length > 0)
+               // {
+               //    elementDescription = document.getElementId("descriptionWrong");
+               //    elementDescription.innerHTML = " ";
+               // }
+
+            }
+
+            function validateTitle()
+            {
+               var title = document.getElementById("thistitle").value;
+
+               if (title.length == 0)
+               {
+                  elementTitle = document.getElementById("titleWrong");
+                  elementTitle.innerHTML = "NO TITLE!!!!!!!!!";
+               }
+
+               if (title.length > 0)
+               {
+                  elementTitle = document.getElementById("titleWrong");
+                  elementTitle.innerHTML = " ";
+               }
+            }
+
+            function validateURL()
+            {
+               var URL = document.getElementById("thisurl").value;
+               var regex = /http[s]?:\/\/.*/;
+
+
+
+               if (!regex.test(URL))
+               {
+                  elementURL = document.getElementById("urlWrong");
+                  elementURL.innerHTML = "POORLY FORMED URL!!!!";
+               }
+
+               if (URL.length == 0)
+               {
+                  elementURL = document.getElementById("urlWrong");
+                  elementURL.innerHTML = "NO URL!!!!!";
+               }
+
+
+               if (URL.length > 0 && regex.test(URL))
+               {
+                  elementURL = document.getElementById("urlWrong");
+                  elementURL.innerHTML = " ";
+               }
+            }
+
+            function validateDescription()
+            {
+               var description = document.getElementById("description").value;
+               
+               if (description.length == 0)
+               {
+                  elementDescription = document.getElementById("descriptionWrong");
+                  elementDescription.innerHTML = "NO DESCRIPTION!!!!!!!";
+               }
+
+               if (description.length > 0)
+               {
+                  elementDescription = document.getElementById("descriptionWrong");
+                  elementDescription.innerHTML = " ";
+               }
+            }
+         </script>
+      
+      </form>
+
+      <form action="testMainpage.html" method="get">
+         <input type="submit" value="Le Cancel">
+      </form>
+   </body>
+</html>
