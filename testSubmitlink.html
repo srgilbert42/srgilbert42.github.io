@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<!-- Stop viewing page source, mate.-->
-
+<!-- Stop veiwing page source, mate.-->
 <html>
    <head>
       <title>Submit Link</title>
@@ -9,7 +8,7 @@
 
    <body>
 
-      <form name="myForm2" id="form" action ="./testMainpage.html" method="get" onsubmit="return validation()">
+      <form name="myForm2" id="form" action ="testMainpage.html" method="get" onsubmit="return validation()">
 
          <label for="thisurl">Le URL:</label>
          <div id="urlWrong" class="wrong"></div>
@@ -28,6 +27,7 @@
          <input type="submit" value="Le Submit">
 
          <script type="text/javascript">
+            
             function validation()
             {
                var regex = /http[s]?:\/\/.*/;
@@ -120,7 +120,7 @@
       
       </form>
 
-      <form action="./testMainpage.html" method="get">
+      <form action="testMainpage.html" method="get">
          <input type="submit" value="Le Cancel">
       </form>
    </body>
